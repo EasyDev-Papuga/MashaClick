@@ -3,7 +3,7 @@ let scoreIH = document.getElementsByClassName('score')[0]
 let audio = new Audio('sound/song.mp3')
 let button_img = document.getElementsByClassName('button-img')[0]
 
-score = 0
+let score = 0
 
 
 
