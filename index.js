@@ -8,9 +8,16 @@ score = 0
 
 
 button.addEventListener('click', (event) => {
+    if(localStorage.getItem('scoresv')){
+        score = parseInt(localStorage.getItem('scoresv'))
+    }
+
     audio.play()
     score+=1
     scoreIH.innerHTML = `Score: ${score}`
+
+    localStorage.setItem('scoresv', score)
+
     button_img.style.scale = 0.1
     setTimeout(()=>{
         button_img.style.scale = 0.2
