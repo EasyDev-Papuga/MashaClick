@@ -5,7 +5,21 @@ let button_img = document.getElementsByClassName('button-img')[0]
 
 let score = 0
 
+function delay(f) {
 
+  let isCooldown = false;
+
+  return function() {
+    if (isCooldown) return;
+
+    f.apply(this, arguments);
+
+    isCooldown = true;
+
+    setTimeout(() => isCooldown = false, 100);
+  };
+
+}
 
 button.addEventListener('click', (event) => {
     if(localStorage.getItem('scoresv')){
