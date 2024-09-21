@@ -21,7 +21,7 @@ function delay(f) {
 
 }
 
-button.addEventListener('click', (event) => {
+const onClick = () => {
     if(localStorage.getItem('scoresv')){
         score = parseInt(localStorage.getItem('scoresv'))
     }
@@ -45,5 +45,6 @@ button.addEventListener('click', (event) => {
     setTimeout(()=>{
         button_img.style.scale = 0.5
     }, 200)
-    
-})
+}
+
+button.addEventListener('click', delay(onClick))
