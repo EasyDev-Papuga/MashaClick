@@ -16,7 +16,7 @@ function delay(f) {
 
     isCooldown = true;
 
-    setTimeout(() => isCooldown = false, 100);
+    setTimeout(() => isCooldown = false, 200);
   };
 
 }
